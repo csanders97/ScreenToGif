@@ -488,7 +488,17 @@ namespace ScreenToGif.Windows
             else if (stopRecording.IsChecked == false && keepRecording.IsChecked == true)
             {
                 popup.IsOpen = false;
-                return;
+                Stage = Stage.Paused;
+
+                Title = FindResource("Recorder.Paused").ToString();
+
+                DiscardButton.BeginStoryboard(FindResource("ShowDiscardStoryboard") as Storyboard, HandoffBehavior.Compose);
+
+                AutoFitButtons();
+
+                _capture.Stop();
+
+                FrameRate.Stop();
             }
         }
 
