@@ -33,7 +33,7 @@ namespace ScreenToGif.Windows
         /// </summary>
         private readonly UserActivityHook _actHook;
 
-        private Task<Image> _captureTask;
+        private Task<Image> _captureTask; 
 
         /// <summary>
         /// The project information about the current recording.
@@ -476,7 +476,20 @@ namespace ScreenToGif.Windows
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
-            Stop();
+            popup.IsOpen = true;
+        }
+
+        private void RecordingStop_Click(object sender, RoutedEventArgs e)
+        {
+            if (stopRecording.IsChecked == true && keepRecording.IsChecked == false)
+            {
+                Stop();
+            }
+            else if (stopRecording.IsChecked == false && keepRecording.IsChecked == true)
+            {
+                popup.IsOpen = false;
+                return;
+            }
         }
 
         private void DiscardButton_Click(object sender, RoutedEventArgs e)

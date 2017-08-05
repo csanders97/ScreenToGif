@@ -222,6 +222,30 @@
                                Foreground="{Binding ElementName=RecorderLightWindow, Path=Foreground}"
                                UseLayoutRounding="True" MaxSize="16" Margin="0" TabIndex="10" MinWidth="{Binding RelativeSource={RelativeSource Mode=Self}, Path=ActualHeight}"
                                KeyGesture="{Binding Converter={StaticResource ShortcutKeys}, ConverterParameter='2'}"/>
+                <Popup Name="popup" IsOpen="False" Placement="Mouse">
+                    <Border BorderBrush="Black" BorderThickness="1" Background="White">
+                            <StackPanel Orientation="Horizontal">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <GroupBox Header="Are you sure?" Grid.Row="0">
+                                        <StackPanel>
+                                            <RadioButton x:Name="stopRecording" Content="Yes" />
+                                            <RadioButton x:Name="keepRecording" Content="No" />
+                                        </StackPanel>
+                                    </GroupBox>
+                                <Button x:Name="chooseSelection" Content="Go" 
+                                Grid.Row="1" Click="RecordingStop_Click" />
+                            </Grid>
+                            </StackPanel>
+                        </Border>
+                    </Popup>
             </StackPanel>
         </Grid>
     </Grid>
