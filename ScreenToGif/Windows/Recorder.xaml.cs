@@ -485,7 +485,7 @@ namespace ScreenToGif.Windows
             {
                 Stop();
             }
-            else if (stopRecording.IsChecked == false && keepRecording.IsChecked == true)
+            else
             {
                 popup.IsOpen = false;
                 Stage = Stage.Paused;
