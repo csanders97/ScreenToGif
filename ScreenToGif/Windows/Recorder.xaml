@@ -222,7 +222,7 @@
                                Foreground="{Binding ElementName=RecorderLightWindow, Path=Foreground}"
                                UseLayoutRounding="True" MaxSize="16" Margin="0" TabIndex="10" MinWidth="{Binding RelativeSource={RelativeSource Mode=Self}, Path=ActualHeight}"
                                KeyGesture="{Binding Converter={StaticResource ShortcutKeys}, ConverterParameter='2'}"/>
-                <Popup Name="popup" IsOpen="False" Placement="Mouse">
+                <Popup x:Name="popup" IsOpen="False" Placement="Mouse">
                     <Border BorderBrush="Black" BorderThickness="1" Background="White">
                             <StackPanel Orientation="Horizontal">
                                 <Grid>
