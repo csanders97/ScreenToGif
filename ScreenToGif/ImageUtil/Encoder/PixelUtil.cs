@@ -120,7 +120,7 @@ namespace ScreenToGif.ImageUtil.Encoder
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
