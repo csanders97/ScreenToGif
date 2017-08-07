@@ -1,0 +1,7 @@
+C:\EighthQuartCode\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Lib.deps.json
+C:\EighthQuartCode\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.csprojResolveAssemblyReference.cache
+C:\EighthQuartCode\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.AssemblyInfo.cs
+C:\EighthQuartCode\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Lib.dll
+C:\EighthQuartCode\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Lib.pdb
+C:\EighthQuartCode\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.dll
+C:\EighthQuartCode\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.pdb
