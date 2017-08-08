@@ -5782,6 +5782,11 @@ namespace ScreenToGif.Windows
             }
         }
 
+        private void GoToButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         #endregion
 
         //public void SaveDrawingToFile(DrawingImage drawing, string fileName, double scale)

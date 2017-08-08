@@ -364,6 +364,12 @@
     <s:String x:Key="Editor.Home.Inverse">Inverse</s:String>
     <s:String x:Key="Editor.Home.Deselect">Deselect</s:String>
     
+    <!--Home * Share-->
+    <s:String x:Key="Editor.Home.Share">Share</s:String>
+    <s:String x:Key="Editor.Home.Facebook">Facebook</s:String>
+    <s:String x:Key="Editor.Home.Imgur">Imgur</s:String>
+    <s:String x:Key="Editor.Home.Twitter">Twitter</s:String>
+    
     <!--Playback • Playback-->
     <s:String x:Key="Editor.Playback.Playback">Playback</s:String>
     <s:String x:Key="Editor.Playback.First">First</s:String>
