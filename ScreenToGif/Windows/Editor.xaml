@@ -719,7 +719,7 @@
                                        ToolTip="{Binding Command, RelativeSource={RelativeSource Self}, Converter={StaticResource CommandToInputGestureTextConverter}}" 
                                        ToolTipService.Placement="Bottom" ToolTipService.HorizontalOffset="-5"/>
 
-                        <n:ImageButton Grid.Row="0" Grid.Column="1" x:Name="GoToButton" Text="{DynamicResource Editor.Home.GoTo}" Content="{StaticResource Vector.Forward}"
+                        <n:ImageButton Grid.Row="0" Grid.Column="1" x:Name="GoToButton" Text="{DynamicResource Editor.Home.GoTo}" Content="{StaticResource Vector.Facebook}"
                                        MinWidth="55" ContentHeight="28" Style="{StaticResource Style.Button.Vertical2}" Command="u:Commands.GoTo"
                                        ToolTip="{Binding Command, RelativeSource={RelativeSource Self}, Converter={StaticResource CommandToInputGestureTextConverter}}" 
                                        ToolTipService.Placement="Bottom" ToolTipService.HorizontalOffset="-5" Click="GoToButton_Click"/>

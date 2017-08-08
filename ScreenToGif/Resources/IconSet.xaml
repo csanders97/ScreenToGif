@@ -466,12 +466,12 @@
         <Path Data="M0,8.358L8.503,16.863 15.798,16.863 10.295,10.875C14.954,10.715 20.843,9.936 23.577,13.588 26.502,17.808 25.413,23.365 18.058,25.079L18.058,29.856C25.429,29.856 29.578,24.079 29.891,19.829 30.266,16.376 30,11.232 24.143,7.662 21.913,6.483 19.391,5.921 18.07,5.959 15.498,5.959 12.887,5.959 10.295,5.959L15.798,0 8.503,0z" Fill="#FF3C7CB6" Height="29.856" Canvas.Left="0" Canvas.Top="0" Width="30"/>
     </Canvas>
 
-    <Canvas x:Shared="False" x:Key="Vector.Facebook" HorizontalAlignment="Center" Height="29.856" UseLayoutRounding="False" VerticalAlignment="Center" Width="30">
-        <Path Data="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M18,5H15.5A3.5,3.5 0 0,0 12,8.5V11H10V14H12V21H15V14H18V11H15V9A1,1 0 0,1 16,8H18V5Z" Fill="#FF3b5998" Height="35" Canvas.Left="0" Canvas.Top="0" Width="30"/>
-    </Canvas>
+    <Canvas x:Shared="False" x:Key="Vector.Facebook" HorizontalAlignment="Center" Height="30" UseLayoutRounding="False" VerticalAlignment="Center" Width="30">
+        <Path Data="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914   v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462   v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z" Fill="#FF004cf0" Height="80" Canvas.Left="0" Canvas.Top="0" Width="80"/>
+        </Canvas>
 
     <Canvas x:Shared="False" x:Key="Vector.Imgur" HorizontalAlignment="Center" Height="29.856" UseLayoutRounding="False" VerticalAlignment="Center" Width="30">
-        <Path Data="M48.939 54.273H13.158c-3.006 0-5.431-2.425-5.431-5.334V13.158a5.317 5.317 0 0 1 5.333-5.333h35.781c3.007-.097 5.432 2.327 5.432 5.236v35.781c0 3.007-2.424 5.431-5.334 5.431"  Fill="#FF272727" Height="80" Canvas.Left="0" Canvas.Top="0" Width="80"/>
+        <Path Data="M48.939 54.273H13.158c-3.006 0-5.431-2.425-5.431-5.334V13.158a5.317 5.317 0 0 1 5.333-5.333h35.781c3.007-.097 5.432 2.327 5.432 5.236v35.781c0 3.007-2.424 5.431-5.334 5.431"  Fill="#FF485a96" Height="80" Canvas.Left="0" Canvas.Top="0" Width="80"/>
         <Path Data="M32.648 44.77c8.242-1.066 13.673-9.115 11.637-17.26-1.455-5.527-6.207-9.697-11.831-10.279-8.437-.97-15.806 5.915-15.418 14.448.388 8.146 7.661 14.157 15.71 13.091h-.098z"  Fill="#FF85BF25" Height="80" Canvas.Left="0" Canvas.Top="0" Width="80"/>
     </Canvas>
 
