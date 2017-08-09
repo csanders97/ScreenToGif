@@ -5,3 +5,10 @@ C:\EighthQuartCode\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Li
 C:\EighthQuartCode\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Lib.pdb
 C:\EighthQuartCode\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.dll
 C:\EighthQuartCode\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.pdb
+C:\Users\csanders\Documents\Neumont Homework\Projects in Existing Code\ScreenToGif - Feature\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Lib.deps.json
+C:\Users\csanders\Documents\Neumont Homework\Projects in Existing Code\ScreenToGif - Feature\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Lib.dll
+C:\Users\csanders\Documents\Neumont Homework\Projects in Existing Code\ScreenToGif - Feature\ScreenToGif\GifShare_Lib\bin\Debug\netstandard1.4\GifShare_Lib.pdb
+C:\Users\csanders\Documents\Neumont Homework\Projects in Existing Code\ScreenToGif - Feature\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.csprojResolveAssemblyReference.cache
+C:\Users\csanders\Documents\Neumont Homework\Projects in Existing Code\ScreenToGif - Feature\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.AssemblyInfo.cs
+C:\Users\csanders\Documents\Neumont Homework\Projects in Existing Code\ScreenToGif - Feature\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.dll
+C:\Users\csanders\Documents\Neumont Homework\Projects in Existing Code\ScreenToGif - Feature\ScreenToGif\GifShare_Lib\obj\Debug\netstandard1.4\GifShare_Lib.pdb

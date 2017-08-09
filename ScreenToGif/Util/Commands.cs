@@ -538,6 +538,13 @@ namespace ScreenToGif.Util
 
         #endregion
 
+        #region Share Tab
+        public static RoutedUICommand Facebook { get; set; } = new RoutedUICommand("Share to Facebook", "Facebook", typeof(Commands));
+
+        public static RoutedUICommand Imgur { get; set; } = new RoutedUICommand("Share to Imgur", "Imgur", typeof(Commands));
+
+        #endregion
+
         #region Transitions
 
         /// <summary>

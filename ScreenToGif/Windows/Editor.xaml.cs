@@ -1702,6 +1702,25 @@ namespace ScreenToGif.Windows
 
         #endregion
 
+        #region Share
+
+        private void Share_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = !IsLoading && FrameListView != null && FrameListView.HasItems && !IsLoading;
+        }
+
+        private void Facebook_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Console.WriteLine("Finally");
+        }
+
+        private void Imgur_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Console.WriteLine("Finally");
+        }
+
+        #endregion
+
         #endregion
 
         #region Playback Tab
