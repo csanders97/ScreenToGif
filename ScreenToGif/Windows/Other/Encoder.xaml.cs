@@ -71,9 +71,17 @@ namespace ScreenToGif.Windows.Other
             {
                 tokenSource.Cancel();
             }
-
+            Editor editor = new Editor();
             _encoder = null;
             GC.Collect();
+            if (Editor.facebookWasClicked)
+            {
+                editor.ShareFacebook();
+            }
+            else if (Editor.imgurWasClicked)
+            {
+                editor.ShareImgur();
+            }
         }
 
         private void Window_Activated(object sender, EventArgs e)

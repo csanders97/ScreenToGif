@@ -245,7 +245,7 @@
         <CommandBinding Command="u:Commands.GoTo" CanExecute="Selection_CanExecute" Executed="GoTo_Executed"/>
         <CommandBinding Command="u:Commands.InverseSelection" CanExecute="Selection_CanExecute" Executed="InverseSelection_Executed"/>
         <CommandBinding Command="u:Commands.Unselect" CanExecute="Image_CanExecute" Executed="DeselectAll_Executed"/>
-        
+
         <!--Share-->
         <CommandBinding Command="u:Commands.Facebook" CanExecute="Share_CanExecute" Executed="Facebook_Executed"/>
         <CommandBinding Command="u:Commands.Imgur" CanExecute="Share_CanExecute" Executed="Imgur_Executed"/>
@@ -752,12 +752,12 @@
                     <!--Share-->
                     <Grid Grid.Column="8" Margin="0,1,0,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
+                            <RowDefinition />
                             <RowDefinition Height="16"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="75" />
+                            <ColumnDefinition Width="75" />
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="ShareLabel" Content="{DynamicResource Editor.Home.Share}" 
@@ -765,18 +765,15 @@
 						       FontSize="12" Foreground="#FF707070"/>
 
                         <n:ImageButton Grid.Row="0" Grid.Column="0" x:Name="FacebookButton" Text="{DynamicResource Editor.Home.Facebook}" Content="{StaticResource Vector.Facebook}"
-                                       MinWidth="55" ContentHeight="28" Style="{StaticResource Style.Button.Vertical2}" Command="u:Commands.Facebook"
+                                       MinWidth="55" ContentHeight="28" Style="{StaticResource Style.Button.Vertical}" Command="u:Commands.Facebook"
                                        ToolTip="{Binding Command, RelativeSource={RelativeSource Self}, Converter={StaticResource CommandToInputGestureTextConverter}}" 
-                                       ToolTipService.Placement="Bottom" ToolTipService.HorizontalOffset="-5" />
+                                       ToolTipService.Placement="Bottom" ToolTipService.HorizontalOffset="-5" HorizontalAlignment="Left" VerticalContentAlignment="Stretch" Margin="8,0,0,0" />
 
-                        <n:ImageButton Grid.Row="0" Grid.Column="1" x:Name="ImgurButton" Text="{DynamicResource Editor.Home.Imgur}" Content="{StaticResource Vector.Imgur}"
-                                       MinWidth="55" ContentHeight="28" Style="{StaticResource Style.Button.Vertical2}" Command="u:Commands.Imgur"
+                        <n:ImageButton Grid.Row="0" x:Name="ImgurButton" Text="{DynamicResource Editor.Home.Imgur}" Content="{StaticResource Vector.Imgur}"
+                                       MinWidth="55" ContentHeight="28" Style="{StaticResource Style.Button.Vertical}" Command="u:Commands.Imgur"
                                        ToolTip="{Binding Command, RelativeSource={RelativeSource Self}, Converter={StaticResource CommandToInputGestureTextConverter}}" 
-                                       ToolTipService.Placement="Bottom" ToolTipService.HorizontalOffset="-5" />
+                                       ToolTipService.Placement="Bottom" ToolTipService.HorizontalOffset="-5" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Grid.Column="1" />
                     </Grid>
-
-                    <Separator Grid.Column="9" Grid.Row="0" Width="1" Height="Auto" HorizontalAlignment="Left" Margin="3,2"/>
-
                 </Grid>
             </n:AwareTabItem>
 

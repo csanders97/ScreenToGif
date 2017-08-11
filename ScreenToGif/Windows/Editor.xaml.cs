@@ -162,6 +162,14 @@ namespace ScreenToGif.Windows
 
         private Action<object, RoutedEventArgs> _applyAction = null;
 
+        public static bool facebookWasClicked = false;
+
+        public static bool imgurWasClicked = false;
+
+        private bool alreadySaved = false;
+
+        private String photoSaved = "";
+
         #endregion
 
         public Editor()
@@ -804,6 +812,11 @@ namespace ScreenToGif.Windows
 
         private void SaveAs_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            SaveCurrent();
+        }
+
+        private void SaveCurrent()
+        {
             Pause();
 
             if (!Util.Other.IsFfmpegPresent())
@@ -1001,6 +1014,14 @@ namespace ScreenToGif.Windows
 
         private void SaveAsButton_Click(object sender, RoutedEventArgs e)
         {
+            SaveFinal();
+        }
+
+        private void SaveFinal()
+        {
+
+            alreadySaved = true;
+
             StatusBand.Hide();
 
             #region Common validation
@@ -1052,6 +1073,8 @@ namespace ScreenToGif.Windows
 
                     var fileName = UserSettings.All.SaveToClipboard ? Path.Combine(Path.GetTempPath(), Guid.NewGuid() + ".gif") :
                         Path.Combine(UserSettings.All.LatestOutputFolder, UserSettings.All.LatestFilename + ".gif");
+
+                    photoSaved = fileName;
 
                     //If somehow, this happens.
                     if (UserSettings.All.SaveToClipboard && File.Exists(fileName))
@@ -1111,6 +1134,7 @@ namespace ScreenToGif.Windows
                         UserSettings.All.LatestVideoExtension = (string)FileTypeVideoComboBox.SelectedItem;
 
                     var fileName = Path.Combine(UserSettings.All.LatestVideoOutputFolder, UserSettings.All.LatestVideoFilename + UserSettings.All.LatestVideoExtension);
+                    photoSaved = fileName;
 
                     //Check if file exists.
                     if (!UserSettings.All.OverwriteOnSave)
@@ -1153,7 +1177,7 @@ namespace ScreenToGif.Windows
                         if (!UserSettings.All.ZipImages)
                         {
                             //TODO: Check the verification for existing files. For the 4 types of files.
-                            if (FrameListView.SelectedItems.Count > 1 && !Dialog.Ask(this.TextResource("S.SaveAs.Frames.Confirmation.Title"), 
+                            if (FrameListView.SelectedItems.Count > 1 && !Dialog.Ask(this.TextResource("S.SaveAs.Frames.Confirmation.Title"),
                                 this.TextResource("S.SaveAs.Frames.Confirmation.Instruction"), string.Format(this.TextResource("S.SaveAs.Frames.Confirmation.Message"), FrameListView.SelectedItems.Count)))
                                 return;
 
@@ -1178,7 +1202,7 @@ namespace ScreenToGif.Windows
                         else
                         {
                             var fileName = Path.Combine(UserSettings.All.LatestImageOutputFolder, UserSettings.All.LatestImageFilename + ".zip");
-
+                            photoSaved = fileName;
                             //Check if file exists.
                             if (!UserSettings.All.OverwriteOnSave)
                             {
@@ -1241,7 +1265,6 @@ namespace ScreenToGif.Windows
 
             ClosePanel();
         }
-
 
         private void Load_Executed(object sender, ExecutedRoutedEventArgs e)
         {
@@ -1711,12 +1734,38 @@ namespace ScreenToGif.Windows
 
         private void Facebook_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            Console.WriteLine("Finally");
+            facebookWasClicked = true;
+            if (alreadySaved)
+            {
+                ShareFacebook();
+            }
+            else
+            {
+                SaveCurrent();
+            }
         }
 
         private void Imgur_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            Console.WriteLine("Finally");
+            imgurWasClicked = true;
+            if (alreadySaved)
+            {
+                ShareImgur();
+            }
+            else
+            {
+                SaveCurrent();
+            }
+        }
+
+        public void ShareFacebook()
+        {
+            facebookWasClicked = false;
+        }
+
+        public void ShareImgur()
+        {
+            imgurWasClicked = false;
         }
 
         #endregion

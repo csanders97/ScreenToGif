@@ -476,6 +476,18 @@ namespace ScreenToGif.Windows
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
+            Stage = Stage.Paused;
+
+            Title = FindResource("Recorder.Paused").ToString();
+
+            DiscardButton.BeginStoryboard(FindResource("ShowDiscardStoryboard") as Storyboard, HandoffBehavior.Compose);
+
+            AutoFitButtons();
+
+            _capture.Stop();
+
+            FrameRate.Stop();
+
             popup.IsOpen = true;
         }
 
@@ -488,17 +500,7 @@ namespace ScreenToGif.Windows
             else
             {
                 popup.IsOpen = false;
-                Stage = Stage.Paused;
-
-                Title = FindResource("Recorder.Paused").ToString();
-
-                DiscardButton.BeginStoryboard(FindResource("ShowDiscardStoryboard") as Storyboard, HandoffBehavior.Compose);
-
-                AutoFitButtons();
-
-                _capture.Stop();
-
-                FrameRate.Stop();
+                return;
             }
         }
 
