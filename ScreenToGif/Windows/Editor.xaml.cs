@@ -46,6 +46,8 @@ using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 using Size = System.Windows.Size;
+using GifShare_Lib;
+using AnotherGifShare_Lib;
 
 namespace ScreenToGif.Windows
 {
@@ -1765,7 +1767,10 @@ namespace ScreenToGif.Windows
 
         public void ShareImgur()
         {
+            IPlatformShare share = new ImgurSharing();
             imgurWasClicked = false;
+            share.PullSecrets();
+            share.ShareGif(photoSaved);
         }
 
         #endregion

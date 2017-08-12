@@ -4473,15 +4473,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\WaffleDefender\\.nuget\\packages\\": {}
+    "C:\\Users\\csanders\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\EighthQuartCode\\ScreenToGif\\GifShare_Lib\\GifShare_Lib.csproj",
+      "projectUniqueName": "C:\\Users\\csanders\\Documents\\Neumont Homework\\Projects in Existing Code\\ScreenToGif - Feature\\ScreenToGif\\GifShare_Lib\\GifShare_Lib.csproj",
       "projectName": "GifShare_Lib",
-      "projectPath": "C:\\EighthQuartCode\\ScreenToGif\\GifShare_Lib\\GifShare_Lib.csproj",
-      "outputPath": "C:\\EighthQuartCode\\ScreenToGif\\GifShare_Lib\\obj\\",
+      "projectPath": "C:\\Users\\csanders\\Documents\\Neumont Homework\\Projects in Existing Code\\ScreenToGif - Feature\\ScreenToGif\\GifShare_Lib\\GifShare_Lib.csproj",
+      "outputPath": "C:\\Users\\csanders\\Documents\\Neumont Homework\\Projects in Existing Code\\ScreenToGif - Feature\\ScreenToGif\\GifShare_Lib\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netstandard1.4"
