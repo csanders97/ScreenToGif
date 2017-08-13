@@ -47,7 +47,6 @@ using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 using Size = System.Windows.Size;
 using GifShare_Lib;
-using AnotherGifShare_Lib;
 
 namespace ScreenToGif.Windows
 {
@@ -170,7 +169,7 @@ namespace ScreenToGif.Windows
 
         private bool alreadySaved = false;
 
-        private String photoSaved = "";
+        private static string photoSaved = "";
 
         #endregion
 
@@ -1767,10 +1766,23 @@ namespace ScreenToGif.Windows
 
         public void ShareImgur()
         {
-            IPlatformShare share = new ImgurSharing();
+            //IPlatformShare share = new ImgurSharing();
             imgurWasClicked = false;
-            share.PullSecrets();
-            share.ShareGif(photoSaved);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.imgur.com/3/image");
+            request.Headers.Add("Authorization", "Client-ID 773155c69b21c1b");
+            request.Method = "POST";
+
+            ASCIIEncoding enc = new ASCIIEncoding();
+            string postData = Convert.ToBase64String(File.ReadAllBytes(@""+photoSaved));
+            byte[] bytes = enc.GetBytes(postData);
+
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = bytes.Length;
+
+            Stream writer = request.GetRequestStream();
+            writer.Write(bytes, 0, bytes.Length);
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
         }
 
         #endregion
