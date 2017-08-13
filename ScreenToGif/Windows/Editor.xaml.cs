@@ -829,7 +829,7 @@ namespace ScreenToGif.Windows
 
         private void SaveType_Checked(object sender, RoutedEventArgs e)
         {
-            if (!IsLoaded)
+            if (!IsLoaded)  
                 return;
 
             switch (UserSettings.All.SaveType)
