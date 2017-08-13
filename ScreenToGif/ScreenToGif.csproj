@@ -592,12 +592,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\Style.css" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AnotherGifShare_Lib\GifShare_Lib.csproj">
-      <Project>{f6e60d20-99e0-4f8b-a9e8-fd914587f80b}</Project>
-      <Name>GifShare_Lib</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
