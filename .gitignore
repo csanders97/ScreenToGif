@@ -32,3 +32,5 @@ ScreenToGif/Util/Secret.cs
 /Other/Translator/obj
 /Other/Translator/Translator.csproj.user
 /ScreenToGif.UWP
+GifShare_Lib/obj/Debug/netstandard1.4/CoreCompileInputs.cache
+*.cache
