@@ -46,7 +46,7 @@ using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 using Size = System.Windows.Size;
-using GifShare_Lib;
+using System.Collections.Specialized;
 
 namespace ScreenToGif.Windows
 {
@@ -505,7 +505,6 @@ namespace ScreenToGif.Windows
         }
 
         #endregion
-
 
         #region File Tab
 
@@ -1766,23 +1765,25 @@ namespace ScreenToGif.Windows
 
         public void ShareImgur()
         {
-            //IPlatformShare share = new ImgurSharing();
             imgurWasClicked = false;
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.imgur.com/3/image");
-            request.Headers.Add("Authorization", "Client-ID 773155c69b21c1b");
-            request.Method = "POST";
-
-            ASCIIEncoding enc = new ASCIIEncoding();
-            string postData = Convert.ToBase64String(File.ReadAllBytes(@""+photoSaved));
-            byte[] bytes = enc.GetBytes(postData);
-
-            request.ContentType = "application/x-www-form-urlencoded";
-            request.ContentLength = bytes.Length;
-
-            Stream writer = request.GetRequestStream();
-            writer.Write(bytes, 0, bytes.Length);
-
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            using (var w = new WebClient())
+            {
+                string clientID = "773155c69b21c1b";
+                w.Headers.Add("Authorization", "Client-ID " + clientID);
+                var values = new NameValueCollection
+                {
+                    { "image", Convert.ToBase64String(File.ReadAllBytes(@""+photoSaved)) }
+                };
+                byte[] response = w.UploadValues("https://api.imgur.com/3/upload.xml", values);
+                XDocument x = XDocument.Load(new MemoryStream(response));
+                var link = x.Descendants().Where(n => n.Name == "link").FirstOrDefault();
+                string href = link.Value;
+                string messageBoxText = "Your work was just posted on Imgur! The link is " + href;
+                string caption = "Success";
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.None;
+                MessageBoxResult result = MessageBox.Show(messageBoxText, caption, button, icon);
+            }
         }
 
         #endregion
@@ -3084,7 +3085,6 @@ namespace ScreenToGif.Windows
         }
 
         #endregion
-
 
         #region Other Events
 
